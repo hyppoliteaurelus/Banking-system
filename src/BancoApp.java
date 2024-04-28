@@ -5,7 +5,7 @@ public class BancoApp {
     // Método main, ponto de entrada do programa
     public static void main(String[] args) {
         // Cria uma instância da classe ContaBancaria com os dados iniciais do cliente
-        ContaBancaria conta = new ContaBancaria("Jacqueline Oliveira", "Corrente", 2500.00);
+        ContaBancaria conta = new ContaBancaria("Jacqueline Oliveira", "Corrente", 2500.00, 1000.00, 0.00);
         // Chama o método exibirMenu passando a conta criada como parâmetro
         exibirMenu(conta);
     }
@@ -24,7 +24,9 @@ public class BancoApp {
             System.out.println("1- Consultar saldos");
             System.out.println("2- Receber valor");
             System.out.println("3- Transferir valor");
-            System.out.println("4- Sair");
+            System.out.println("4- Definir limite de transferência");
+            System.out.println("5- Exibir histórico de transações");
+            System.out.println("6- Sair");
             System.out.print("\nDigite a opção desejada: ");
             // Lê a opção escolhida pelo usuário
             opcao = scanner.nextInt();
@@ -47,12 +49,38 @@ public class BancoApp {
                     conta.transferirValor(valorTransferencia);
                     break;
                 case 4:
-                    System.out.println("Encerrando o aplicativo."); // Imprime uma mensagem informando que o aplicativo está sendo encerrado
-                    break; // Sai do loop do-while, encerrando o programa
+                    System.out.print("Informe o novo limite de transferência: ");
+                    double novoLimite = scanner.nextDouble();
+                    conta.definirLimiteTransferencia(novoLimite);
+                    break;
+                case 5:
+                    conta.exibirHistoricoTransacoes();
+                    break;
+                case 6:
+                    System.out.println("Encerrando o aplicativo.");
+                    break;
+                case 7:
+                    System.out.print("Informe o valor a depositar: ");
+                    double valorDeposito = scanner.nextDouble();
+                    conta.depositarValor(valorDeposito);
+                    break;
+                case 8:
+                    System.out.print("Informe o valor a retirar: ");
+                    double valorRetirada = scanner.nextDouble();
+                    conta.retirarValor(valorRetirada);
+                    break;
+                case 9:
+                    System.out.print("Informe o valor a transferir: ");
+                    double valorTransferenciaProgramada = scanner.nextDouble();
+                    System.out.print("Informe a data para transferência (dd/mm/aaaa): ");
+                    String dataTransferenciaProgramada = scanner.next();
+                    conta.agendarTransferencia(valorTransferenciaProgramada, dataTransferenciaProgramada);
+                    break;
                 default:
-                    System.out.println("Opção inválida."); // Se o usuário escolher uma opção inválida, imprime uma mensagem informando isso
-                    break; // Reinicia o loop do-while para que o usuário escolha uma opção válida
+                    System.out.println("Opção inválida.");
+                    break;
             }
-        } while (opcao != 4); // O loop continua enquanto o usuário não escolher a opção "4" (Sair)
+        } while (opcao != 6);
     }
 }
+
