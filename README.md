@@ -1,13 +1,6 @@
 # Conta Bancária Virtual
 
-Este projeto é uma aplicação Java para controlar uma conta bancária virtual, onde é possível realizar operações como consultar saldo, receber e transferir valores.
-
-## Funcionalidades
-
-- Consultar saldo
-- Receber valor
-- Transferir valor
-- Encerrar aplicação
+Este é um projeto de uma aplicação de conta bancária virtual desenvolvida em Java. A aplicação permite que os usuários realizem operações bancárias básicas, como consultar saldo, receber e transferir valores, definir limites de transferência, entre outras funcionalidades.
 
 ## Dados Iniciais do Cliente
 
@@ -15,14 +8,33 @@ Este projeto é uma aplicação Java para controlar uma conta bancária virtual,
 - **Tipo de Conta:** Corrente
 - **Saldo Inicial:** R$ 2500,00
 
+## Funcionalidades
+
+- Consultar saldo da conta
+- Receber valores na conta
+- Transferir valores para outras contas
+- Definir limites de transferência
+- Registrar histórico de transações
+- Realizar depósitos na conta
+- Realizar retiradas de dinheiro da conta
+- Programar transferências para uma data futura
+
 ## Como Executar
 
-1. Clone este repositório:
-        ```bash
-git clone https://github.com/seu-usuario/conta-bancaria-virtual.git
-        2. Abra o projeto no IntelliJ IDEA.
-        3. Execute o arquivo BancoApp.java.
-4. Siga as instruções exibidas no console para realizar as operações desejadas.
+1. Certifique-se de ter o Java instalado no seu sistema.
+2. Clone este repositório para o seu ambiente local.
+3. Abra o projeto em sua IDE preferida.
+4. Compile e execute o arquivo `BancoApp.java`.
+5. Siga as instruções apresentadas no console para interagir com a aplicação.
 
-# Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests com melhorias, correções de bugs, ou adição de novas funcionalidades.
+## Contribuição
+
+Contribuições são bem-vindas! Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Autor
+
+[HYPPOLITE AURELUS]
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
